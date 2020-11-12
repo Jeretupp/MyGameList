@@ -1,0 +1,42 @@
+<%- include('header'); -%>
+<div class="container-form">
+	<h1><% if(editing){ %>Edit Game<% } else { %>Add Game<% } %></h1>
+
+	<form method="POST" action="/<% if(editing){ %>edit-game<% } else { %>add-game<% } %>">
+		<div>
+			<label>Name</label>
+			<input type="text" name="name" value="<% if(editing){ %><%= game.name %><% } %>" required />
+		</div>
+		<div>
+			<label>Image</label>
+			<input type="text" name="image" value="<% if(editing){ %><%= game.image %><% } %>"  />
+		</div>
+		<div>
+			<label>Description</label>
+			<textarea type="text" name="description" rows="10" cols="50" required ><% if(editing){ %><%= game.description %><% } %></textarea>
+        </div>
+        <div>
+			<label>Playtime</label>
+			<textarea type="text" name="playtime" rows="1" cols="50" required ><% if(editing){ %><%= game.playtime %><% } %></textarea>
+        </div>
+        <div>
+			<label>Rating out of 10</label>
+			<textarea type="text" name="rating" rows="1" cols="2" required ><% if(editing){ %><%= game.rating %><% } %></textarea>
+        </div>
+        <div>
+			<label>Review</label>
+			<textarea type="text" name="review" rows="15" cols="100" required ><% if(editing){ %><%= game.review %><% } %></textarea>
+		</div>
+		<% if(editing){ %>
+		<div>
+			<input type="hidden" name="gameId" value="<%= game.id %>" />
+		</div>
+		<% } %>
+		<div>
+			<button type="submit"><% if(editing){ %>Edit Game<% } else { %>Add Game<% } %></button>
+		</div>
+	</form>
+</div>
+		<%- include('footer'); -%>
+	</body>
+</html>

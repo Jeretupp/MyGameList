@@ -7,11 +7,11 @@ router.get('/', adminController.getIndex);
 
 router.get('/add-game', adminController.getAddGame);
 
-router.get('/edit-list/:gameId', adminController.getEditList);
+router.get('/edit-game/:gameId', adminController.getEditGame);
 
 router.post('/add-game', adminController.postGame);
 
-router.post('/edit-list', adminController.postEditList);
+router.post('/edit-game', adminController.postEditGame);
 
 router.get('/:gameId', adminController.getGame);
 

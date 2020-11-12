@@ -1,32 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('header'); -%>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game</title>
-</head>
+<main>
+	<div class="container-game">
+		<div><h1>Game</h1></div>
+		<div class="game-content">
+			<div><img src="<%= game.image %>" alt="<%= game.name %>" /></div>
+			<div>
+				<h2><%= game.name %></h2>
 
-<body>
-    <h1>Games</h1>
-
-    <main>
-        <h1><%= game.name %></h1>
-        <img src="<%= game.image %>" alt="<%= game.name %>" />
-        <p><%= game.description %></p>
-        <p><%= game.playtime %></p>
-        <div>
-            <form method="POST" action="/delete">
-                <div>
-                    <input type="hidden" value="<%= game.id %>" name="gameId" />
-                    <button>Delete</button>
-                </div>
-            </form>
-        </div>
-        <div>
-            <a href="/edit-list/<%= game.id %>?edit=true">Edit</a>
-        </div>D
-    </main>
-</body>
-
-</html>
+                <p class="game-description"><%= game.description %></p>
+                <h2>Playtime:</h2>
+                <p class="game-description"><%= game.playtime %></p>
+                <h2>Rating out of 10:</h2>
+                <p class="game-description"><%= game.rating %> / 10</p>
+                <h2>Review:</h2>
+                <p class="game-description"><%= game.review %></p>
+			</div>
+		</div>
+		<div class="game-edit-delete">
+			<div>
+				<form method="POST" action="/delete">
+					<div>
+						<input type="hidden" value="<%= game.id %>" name="gameId" />
+						<button>Delete</button>
+					</div>
+				</form>
+			</div>
+			<div>
+				<a href="/edit-game/<%= game.id %>?edit=true">Edit</a>
+			</div>
+		</div>
+	</div>
+</main>
+<%- include('footer'); -%>
