@@ -20,7 +20,39 @@ body {
     background: -moz-linear-gradient(left, #071224 1%, #061224 50%, #071529 59%, #071529 100%);
     /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #071224 1%, #061224 50%, #071529 59%, #071529 100%);
-    /* Chrome10-25,Safari5.1-6 */
+    /* Chrome10-25,Safari5.1-6 */.container-form {
+    display: grid;
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 100%;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.container-form form input,
+textarea {
+    padding: 1rem;
+}
+
+.container-form form div {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.container-form form button {
+    display: block;
+    background: #162034;
+    border: none;
+    color: #ffffff;
+    padding: 1rem;
+    margin: 2rem 0 0 0;
+    cursor: pointer;
+    transition: background 1s, border 1s;
+}
+
+.container-form form button:hover {
+    background: #242c3b;
+}
     background: linear-gradient(to right, #071224 1%, #061224 50%, #071529 59%, #071529 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#071224', endColorstr='#071529', GradientType=1);
@@ -31,6 +63,7 @@ body {
 
 label {
     color: cyan;
+    font-size: 30px;
 }
 h1 {
     color: white;
@@ -51,6 +84,10 @@ header h1 {
 }
 
 header a {
+    border-radius:22px;
+    border:2px solid #304774;
+    margin-bottom: 15px;
+    display: block;
     display: grid;
     align-items: center;
     color: #ffffff;
@@ -62,20 +99,21 @@ header a {
 }
 
 header a:hover {
-    background: #f880be;
+    background: #242c3b;
 }
 
 .container {
+
     display: grid;
-    margin: 0 auto;
-    /* max-width: 120rem; */
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    border-radius: 0.7rem;
-    background: #023990;
-    -webkit-box-shadow: 0px 0px 26px -2px rgba(36, 4, 92, 1);
-    -moz-box-shadow: 0px 0px 26px -2px rgba(36, 4, 92, 1);
-    box-shadow: 0px 0px 26px -2px rgba(36, 4, 92, 1);
+    border-radius: 35px;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+    grid-template-columns: repeat(6, minmax(200px, 1fr));
+    background: #02389025;
+    -webkit-box-shadow: 0px 0px 26px -2px rgb(63, 8, 156);
+    -moz-box-shadow: 0px 0px 26px -2px rgb(63, 8, 156);
+    box-shadow: 0px 0px 26px -2px rgb(63, 8, 156);
 }
 
 main {
@@ -83,19 +121,22 @@ main {
 }
 
 .game {
-    border-left: 2px solid #7760A0;
-    border-right: 2px solid #7760A0;
-    border-bottom: 2px solid #7760A0;
-    border-top: 2px solid #7760A0;
+    border-radius: 25px;
+    border-left: 5px solid #c9b5eb;
+    border-right: 5px solid #c9b5eb;
+    border-bottom: 5px solid #c9b5eb;
+    border-top: 5px solid #c9b5eb;
+    margin: 15px;
     list-style: none;
     transition: background 1s, opacity 1s;
     cursor: pointer;
     opacity: 1;
     max-width: 30rem;
+    position: relative;
 }
 
 .game:hover {
-    background: #7760A0;
+    background: #498efb25;
     opacity: 0.8;
 }
 
@@ -109,8 +150,18 @@ ul li:nth-child(3) {
 } */
 
 .game-img {
-    width: 100%;
-    height: 40rem;
+    border-radius: 25px;
+    border-left: 4px solid #c9b5eb;
+    border-right: 4px solid #c9b5eb;
+    border-bottom: 4px solid #c9b5eb;
+    border-top: 4px solid #c9b5eb;
+    width: 75%;
+    height: 20rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .game h1 {
@@ -132,7 +183,7 @@ p {
 
 .game a {
     display: block;
-    border: 0.1rem solid #9C3E6E;
+    border: 0.1rem solid #1c2942;
     color: #ffffff;
     text-decoration: none;
     padding: 1rem;
@@ -143,8 +194,8 @@ p {
 }
 
 .game a:hover {
-    background: #ce5292;
-    border: 0.1rem solid #c54989;
+    background: #162034;
+    border: 0.1rem solid #1c2942;
 }
 
 .container-form {
@@ -167,18 +218,21 @@ textarea {
 }
 
 .container-form form button {
+    color: rgb(0, 190, 190);
+    font-size: 30px;
+    border-radius:22px;
+    border:2px solid #333029;
     display: block;
-    background: #ce5292;
+    background: #162034;
     border: none;
-    color: #ffffff;
-    padding: 1rem;
+    padding: 2rem;
     margin: 2rem 0 0 0;
     cursor: pointer;
     transition: background 1s, border 1s;
 }
 
 .container-form form button:hover {
-    background: #f880be;
+    background: #233049;
 }
 
 .container-game {
@@ -214,13 +268,15 @@ textarea {
     height: 4rem;
     padding: 2rem;
 }
-
 .game-edit-delete button,
 .game-edit-delete a {
+    border-radius:22px;
+    border:2px solid #333029;
+    margin-right: 15px;
     display: block;
     background: #371D5E;
     border: none;
-    color: #ffffff;
+    color: rgb(0, 190, 190);
     padding: 8px;
     height: 5rem;
     cursor: pointer;
