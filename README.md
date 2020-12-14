@@ -10,13 +10,14 @@ MongoDB Compass
 # Install
 
 Create a .env file into backend
+
 add:
 DB_HOST="mongodb://[ip]:[dbName]"
 into the .env
 (replace ip and DataBase with your own)
 
 run the commands in the main directory
-
+```
 cd backend
 npm install
 cd ..
@@ -25,6 +26,7 @@ npm install
 cd ..
 cd backend
 npm run servers
+```
 
 
 
