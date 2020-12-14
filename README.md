@@ -5,6 +5,7 @@ Everything is added to a local mongo DB
 
 # Requirements
 Node
+
 MongoDB Compass
 
 # Install
