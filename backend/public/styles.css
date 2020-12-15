@@ -20,7 +20,16 @@ body {
     background: -moz-linear-gradient(left, #071224 1%, #061224 50%, #071529 59%, #071529 100%);
     /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #071224 1%, #061224 50%, #071529 59%, #071529 100%);
-    /* Chrome10-25,Safari5.1-6 */.container-form {
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #071224 1%, #061224 50%, #071529 59%, #071529 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#071224', endColorstr='#071529', GradientType=1);
+    /* IE6-9 */
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+    .container-form {
     display: grid;
     margin: 0 auto;
     max-width: 120rem;
@@ -52,13 +61,6 @@ textarea {
 
 .container-form form button:hover {
     background: #242c3b;
-}
-    background: linear-gradient(to right, #071224 1%, #061224 50%, #071529 59%, #071529 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#071224', endColorstr='#071529', GradientType=1);
-    /* IE6-9 */
-
-
 }
 
 label {
@@ -108,7 +110,7 @@ header a:hover {
     border-radius: 35px;
     margin-left: 2%;
     margin-right: 2%;
-    width: 96%;
+    width: 95%;
     grid-template-columns: repeat(6, minmax(200px, 1fr));
     background: #02389025;
     -webkit-box-shadow: 0px 0px 26px -2px rgb(63, 8, 156);
